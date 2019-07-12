@@ -1,0 +1,58 @@
+@import "~ng-pick-datetime/assets/style/picker.min.css";
+@import "assets/icons.scss";
+// regular style toast
+@import '~ngx-toastr/toastr';
+
+@font-face {
+  font-family: Ubuntu-regular;
+  src: url('assets/fonts/Ubuntu-R.ttf');
+}
+
+
+@font-face {
+  font-family: Ubuntu-light;
+  src: url('assets/fonts/Ubuntu-L.ttf');
+}
+
+body {
+  overflow: hidden;
+  background-image: url('~src/assets/manouchehr-hejazi-308120-1.jpg')!important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 1280px;
+  max-width: 1920px;
+
+}
+
+
+.button {
+  background: #00be29;
+  padding: 11px 22px;
+  border-radius: 8px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.94;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 15px;
+  width: 180px;
+  height: 40px;
+  &:hover {
+    background: #14660e;
+    color: #fcfcfc;
+  }
+  &:active {
+    background: green;
+  }
+  &.resetPost{
+    background: red;
+    color: black;
+    &:hover {
+      background: lightcoral;
+    }
+    &:active {
+      background: red;
+    }
+  }
+}

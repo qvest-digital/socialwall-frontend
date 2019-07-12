@@ -1,0 +1,90 @@
+
+.google-calendar-box {
+  position: inherit;
+  background-color: #f1f1f1;
+  min-width: 100%;
+  flex-flow: column wrap;
+  overflow: hidden;
+}
+
+.calendar-header-box{
+  display: flex;
+  align-content: center;
+  margin: 10px 0;
+  padding-left: 15px;
+}
+
+
+.google-calendar-box-item {
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  border-left: 5px solid #ffffff;
+  &.selected {
+    border-left: 5px solid #cc0000;
+    filter:  drop-shadow(0 10px 0.75rem black);
+  }
+  flex-flow: column wrap;
+  overflow: hidden;
+}
+
+
+
+.calendar-header {
+  font-size: 24px;
+  font-weight: 300;
+  color: #3c3c3b;
+  align-self: center;
+  margin-left: 15px;
+}
+
+.day-time-box {
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.day-time-box-sub{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.day-label {
+  justify-self: flex-start;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #3c3c3b;
+  font-family: Ubuntu-light !important;
+
+}
+
+.time-label {
+  justify-self: flex-end;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: right;
+  color: #3c3c3b;
+  padding-left: 15px;
+}
+
+.date-label{
+  margin: 0 10px;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.14;
+  color: #3c3c3b;
+
+}
+
+.text {
+  margin: 5px 10px 15px 10px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #3c3c3b;
+}

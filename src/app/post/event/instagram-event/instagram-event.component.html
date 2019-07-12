@@ -1,0 +1,29 @@
+<div class="instagram-event-container">
+  <div class="left-side">
+    <div class="wrapper-image">
+      <span *ngIf="this.socialPost !== undefined">
+        <img class="background" src="{{this.socialPost.image}}">
+        <img class="image" src="{{this.socialPost.image}}">
+      </span>
+    </div>
+  </div>
+  <div class="right-side-wrapper">
+    <div>
+      <div class="path-box">
+        <span class="icon ic-path"></span>
+        <span class="event-label">INSTAGRAM</span>
+      </div>
+      <span *ngIf="this.socialPost !== undefined">
+        <p class="instagram-text">{{this.socialPost.text}}</p>
+
+        <div class="like-comment-box">
+          <div class="icon ic-i-like"></div>
+          <div>{{this.socialPost.likes}}</div>
+          <div class="icon ic-comment"></div>
+          <div>{{this.socialPost.comments}}</div>
+        </div>
+      </span>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,47 @@
+<div class="admin-component-layout">
+  <div>
+    <form class="form-layout" [formGroup]="form">
+      <div class="item">
+        First name: <input formControlName="firstname" type="text">
+        Last name: <input formControlName="lastname" type="text">
+      </div>
+      <div>
+        Username: <input formControlName="username" type="text">
+        Password: <input formControlName="password" type="password">
+      </div>
+      <div *ngIf="selectedUser === undefined">
+        <a class="button" (click)="createUser()" type="button">
+        <span class="icon is-small">
+          <i class=""></i>
+        </span>
+          <span>Benutzer estellen</span>
+        </a>
+      </div>
+      <div class="button-layout" *ngIf="selectedUser !== undefined">
+        <div>
+          <a class="button" (click)="updateUser()" type="button">
+          <span class="icon is-small">
+            <i class=""></i>
+          </span>
+            <span>Benutzer ändern</span>
+          </a>
+        </div>
+        <div *ngIf="selectedUser !== undefined">
+          <a class="button" (click)="deleteUser()" type="button">
+          <span class="icon is-small">
+            <i class=""></i>
+          </span>
+            <span>Benutzer löschen</span>
+          </a>
+        </div>
+      </div>
+    </form>
+
+  </div>
+  <div class="list-container">
+    <div class="list-item caption">Benutzer</div>
+    <span *ngFor="let item of this.users">
+            <div (click)="selectedItem(item)" *ngIf="item.username !== 'admin'" class="list-item"> {{item.username}}</div>
+        </span>
+  </div>
+</div>

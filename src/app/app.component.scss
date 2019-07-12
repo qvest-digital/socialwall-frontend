@@ -1,0 +1,16 @@
+.socialwall-body{
+
+}
+
+.socialwall-main-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  width: 95%;
+  height: 95%;
+  font-family: Ubuntu-regular;
+  filter: drop-shadow(10px 10px 1.75rem #CC0000);
+}
+

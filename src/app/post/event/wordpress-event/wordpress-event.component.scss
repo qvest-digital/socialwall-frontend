@@ -1,0 +1,48 @@
+.wordpress-post-sub-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.wordpress-path-box {
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+  margin-left: 35px;
+}
+
+
+.wordpress-label {
+  font-size: 26px;
+  font-weight: 300;
+  color: #3c3c3b;
+  margin-left: 35px;
+}
+
+.caption-wordpress {
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 1.24;
+  color: #3c3c3b;
+  margin-top: 50px;
+  margin-left: 35px;
+}
+
+.description-box{
+  width: auto;
+  margin-left: 35px;
+  margin-right: 35px;
+}
+
+.description-wordpress {
+  margin-top: 50px;
+  font-size: 18px;
+  line-height: 1.59;
+  color: #3c3c3b;
+  word-wrap: break-word;
+  overflow: unset;
+  text-overflow: ellipsis;
+  font-family: Ubuntu-light !important;
+}
+

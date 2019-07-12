@@ -1,0 +1,36 @@
+<div class="google-calendar-event-container">
+  <div class="left-side">
+    <span *ngIf="this.socialPost !== undefined">
+    <div class="display-calendar-box">
+      <span class="month-year-label">{{this.socialPost.start * 1000 | date:'LLLL yyyy'}}</span>
+      <span class="date-label">{{this.socialPost.start * 1000 | date:'dd'}}</span>
+      <span class="day-label">{{this.socialPost.start * 1000 | date:'EEEE'}}</span>
+    </div>
+    </span>
+  </div>
+  <div>
+    <div class="right-side-wrapper">
+      <div class="path-box">
+        <span class="icon ic-path"></span>
+        <span class="event-label">EVENTS</span>
+      </div>
+      <span *ngIf="this.socialPost !== undefined">
+        <div class="titel">
+          {{this.socialPost.text}}
+        </div>
+      <div class="location-time-wrapper">
+        <div class="location-box">
+          <div class="icon ic-pin"></div>
+          <div class="location-name">{{this.parseLocation()}}</div>
+        </div>
+        <div class="time-box">
+          <div class="icon ic-clock"></div>
+          <div class="time-label">{{this.socialPost.start * 1000 | date:'HH:mm'}}
+            - {{this.socialPost.end * 1000 | date:'HH:mm'}}</div>
+        </div>
+      </div>
+      <div [innerHTML]="this.socialPost.description" class="description"></div>
+      </span>
+    </div>
+  </div>
+</div>

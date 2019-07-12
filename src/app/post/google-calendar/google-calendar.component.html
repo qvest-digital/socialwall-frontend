@@ -1,0 +1,20 @@
+<div class="google-calendar-box">
+  <div class="calendar-header-box">
+    <span class="icon ic-calender-with-circle"></span>
+    <span class="calendar-header"> KALENDER</span>
+  </div>
+  <span *ngFor="let item of googlePosts; let i = index">
+    <div [ngClass]="(socialPostIndex === i)?'google-calendar-box-item selected':'google-calendar-box-item'">
+      <div class="day-time-box">
+        <div class="day-label">{{item.start * 1000 | date:'EEEE' | uppercase}}</div>
+        <div class="day-time-box-sub">
+          <span class="icon ic-clock-small"></span><span class="time-label">{{item.start * 1000 | date:'HH:mm'}}
+          - {{item.end * 1000 | date:'HH:mm'}}</span>
+        </div>
+      </div>
+      <div class="date-label">{{item.start * 1000 | date:'dd.MM.yyyy'}}<span
+        *ngIf="!sameDay(item)"> - {{item.end * 1000 | date:'dd.MM.yyyy'}}</span></div>
+      <div class="text">{{item.text}}</div>
+    </div>
+  </span>
+</div>

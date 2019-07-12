@@ -1,0 +1,136 @@
+
+.login-box {
+  width: 520px;
+  height: 570px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px 0 rgba(255, 255, 255, 0.5);
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  font-family: Ubuntu-light;
+
+}
+
+.logo-caption-box {
+  width: 340px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+.input-box {
+  width: 340px;
+  height: 50px;
+  border: solid 0.5px #3c3c3b;
+  background-color: #ffffff;
+}
+
+input[type=text], select {
+  width: 340px;
+  height: 50px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=password], select {
+  width: 340px;
+  height: 50px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 340px;
+  height: 50px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  &:hover {
+    background-color: #45a049;
+  }
+}
+
+.button {
+  width: 340px;
+  height: 50px;
+  border-radius: 8px;
+  background-color: #cc0000;
+  margin-top: 15px;
+}
+
+.button-text {
+  width: 304.9px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.94;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+
+.label-name {
+  width: 100px;
+  height: 16px;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3c3c3b;
+}
+
+.Social-Wall-Label {
+  width: 192px;
+  height: 34px;
+  font-size: 30px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+.logo-box {
+  width: 50px;
+  height: 50px;
+}
+
+.log-in-text {
+  width: auto;
+  height: auto;
+  font-size: 26px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #3c3c3b;
+}

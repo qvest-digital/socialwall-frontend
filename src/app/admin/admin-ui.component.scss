@@ -1,0 +1,80 @@
+.socialwall-admin-container {
+  display: grid;
+  background-color: white;
+  grid-template-rows: 80px
+  1fr;
+  padding: 15px 15px;
+  width: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.socialwall-admin-frame {
+  background: #f5f5f5;
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+
+.left-side{
+  padding: 20px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  grid-template-rows: 1fr 80px;
+}
+
+.right-side{
+  background-color: white;
+  &.wrapper{
+    display: grid;
+    grid-template-columns: 600px 400px;
+  }
+}
+
+.logo-caption-box {
+  display: flex;
+  padding-left: 50px;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.logo-box {
+  width: 50px;
+  height: 50px;
+}
+
+.Social-Wall-Label {
+  font-size: 30px;
+  font-weight: 500;
+  &.tarent-text{
+    padding-left: 15px;
+  }
+  &.forward-slash{
+    padding-left: 45px;
+    padding-right: 15px;
+  }
+
+}
+
+.admin-component-layout{
+  background: #f5f5f5;
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+
+.button-box{
+  padding: 10px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 150px;
+}
+
+
+

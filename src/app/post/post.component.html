@@ -1,0 +1,30 @@
+<div class="socialwall-post-container">
+  <div class="socialwall-header">
+    <div class="logo-caption-box">
+      <img class="logo-box" src="assets/tarent_dot_red_white.png">
+      <span class="Social-Wall-Label tarent-text">tarent</span>
+      <span class="Social-Wall-Label forward-slash">//</span>
+      <span class="Social-Wall-Label">SOCIAL WALL</span>
+    </div>
+  </div>
+  <div class="wrapper-body">
+    <div  class="socialwall-container" >
+        <div class="socialwall-container-item" *ngIf="socialPost !== undefined && socialPost.source === 'Google calendar'">
+            <app-google-calendar-event
+                                       [socialPost]="socialPost"></app-google-calendar-event>
+        </div>
+      <div class="socialwall-container-item" *ngIf="socialPost !== undefined && socialPost.source === 'custom post'">
+            <app-custom-post-event [socialPost]="socialPost"></app-custom-post-event>
+          </div>
+      <div class="socialwall-container-item" *ngIf="socialPost !== undefined && socialPost.source === 'instagram'">
+            <app-instagram-event [socialPost]="socialPost"></app-instagram-event>
+          </div>
+      <div class="socialwall-container-item" *ngIf="socialPost !== undefined && socialPost.source === 'wordpress'">
+            <app-wordpress-event [socialPost]="socialPost"></app-wordpress-event>
+          </div>
+    </div>
+    <div  class="socialwall-container" >
+      <app-google-calendar [googlePosts]="googlePosts" [selectComponent]="selectComponent"></app-google-calendar>
+    </div>
+  </div>
+</div>

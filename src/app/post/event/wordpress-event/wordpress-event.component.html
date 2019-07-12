@@ -1,0 +1,12 @@
+<div class="wordpress-post-sub-container">
+  <div class="wordpress-path-box">
+    <span class="icon ic-path"></span>
+    <span class="wordpress-label">TARENT BLOG</span>
+  </div>
+  <span *ngIf="this.socialPost !== undefined">
+    <div class="caption-wordpress">{{this.socialPost.text}}</div>
+    <div class="description-box">
+      <div class="description-wordpress" [innerHTML]="this.socialPost.description"></div>
+    </div>
+  </span>
+</div>

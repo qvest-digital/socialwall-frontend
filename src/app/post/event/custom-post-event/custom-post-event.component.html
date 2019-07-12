@@ -1,0 +1,32 @@
+
+<span *ngIf="this.socialPost !== undefined">
+      <span *ngIf="this.socialPost.text.trim().length === 0; else elseBlock">
+        <div class="image-only">
+            <img class="image-only-display" src="{{this.socialPost.image}}">
+        </div>
+      </span>
+<ng-template #elseBlock>
+  <div class="custom-post-event-container">
+
+      <div class="left-side">
+        <div class="wrapper-image">
+            <img class="background" src="{{this.socialPost.image}}">
+            <img class="image" src="{{this.socialPost.image}}">
+        </div>
+      </div>
+      <div>
+        <div class="right-side-wrapper">
+            <div class="path-box">
+              <span class="icon ic-path"></span>
+              <span class="event-label">INFO</span>
+            </div>
+            <div>
+                <div class="custom-post-titel">{{this.socialPost.title}}</div>
+                <div class="custom-post-text" [innerHTML]="this.socialPost.text"></div>
+            </div>
+          </div>
+        </div>
+  </div>
+</ng-template>
+</span>
+

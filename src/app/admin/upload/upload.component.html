@@ -1,0 +1,75 @@
+<div class="admin-component-layout">
+
+  <div class="socialwall-upload-sub-container">
+    <div *ngIf="error">
+      {{error.statusText}}: {{error.error.msg}}
+    </div>
+
+    <div class="socialwall-upload-sub-container">
+      <span>Titel: <input [(ngModel)]="title" placeholder="Titel" type="text"></span>
+    </div>
+
+
+    <div class="socialwall-upload-sub-container">
+      <div>
+        <span>Start:
+          <input [(ngModel)]="startDate"
+                 [owlDateTimeTrigger]="dt"
+                 [owlDateTime]="dt" placeholder="Date Time:">
+          <owl-date-time #dt></owl-date-time>
+        </span>
+        <span>Ende:
+          <input [(ngModel)]="endDate"
+                 [owlDateTimeTrigger]="dt2"
+                 [owlDateTime]="dt2" placeholder="Date Time:">
+          <owl-date-time #dt2></owl-date-time>
+        </span>
+      </div>
+    </div>
+
+    <div class="socialwall-upload-sub-container with-border">
+      <div>
+        <img src="{{this.selectedFile}}">
+      </div>
+      <div>
+        <div class="img-size">
+        <input
+          #fileInput
+          (change)="onFileChanged($event)"
+          accept="image/*" style="display: none"
+          type="file">
+        </div>
+        <button (click)="fileInput.click()">Select File</button>
+      </div>
+
+    </div>
+
+    <div class="socialwall-upload-sub-container with-border">
+      <angular-editor [(ngModel)]="htmlContent" [config]="editorConfig"
+                      [placeholder]="'Enter text here...'"></angular-editor>
+    </div>
+    <div class="button-box">
+      <div>
+        <a class="button resetPost" (click)="resetPost()">ABBRECHEN</a>
+      </div>
+      <div *ngIf="this.selectedPost === undefined">
+        <a class="button is-success  is-left" (click)="createPost()">ERSTELLEN</a>
+      </div>
+
+      <div *ngIf="this.selectedPost !== undefined">
+        <a class="button is-success" (click)="updatePost()">ÄNDERN</a>
+      </div>
+
+      <div *ngIf="this.selectedPost !== undefined">
+        <a class="button is-success" (click)="deletePost()">LÖSCHEN</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="list-container">
+    <div class="list-item caption">Blog Einträge</div>
+    <span *ngFor="let item of this.socialPosts; let i = index">
+            <div (click)="selectedItem(item)" class="list-item"> {{item.title}}.</div>
+        </span>
+  </div>
+</div>

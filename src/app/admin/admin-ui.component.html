@@ -1,0 +1,27 @@
+<div class="socialwall-admin-container">
+  <div class="logo-caption-box">
+    <img class="logo-box" src="assets/tarent_dot_red_white.png">
+    <span class="Social-Wall-Label tarent-text">tarent</span>
+    <span class="Social-Wall-Label forward-slash">//</span>
+    <span class="Social-Wall-Label">SOCIAL WALL</span>
+  </div>
+  <div class="socialwall-admin-frame">
+    <div class="left-side">
+      <div class="button-box">
+        <a class="button" (click)="showPostManagementForm()">Postverwaltung</a>
+        <a class="button" (click)="showUserManagementForm()">Benutzerverwaltung</a>
+      </div>
+      <div class="button-box">
+        <a class="button" (click)="logout()">Logout</a>
+      </div>
+    </div>
+    <div>
+      <div *ngIf="showPostManagement">
+        <app-upload></app-upload>
+      </div>
+      <div *ngIf="!showPostManagement">
+        <app-user-management></app-user-management>
+      </div>
+    </div>
+  </div>
+</div>

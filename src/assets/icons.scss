@@ -1,0 +1,67 @@
+$icons-path: '/assets/icon/';
+
+.ic-clock{
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  background-image: url(#{$icons-path}clock.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.ic-clock-small{
+  min-width: 19px;
+  min-height: 19px;
+  object-fit: contain;
+  background-image: url(#{$icons-path}clock.svg);
+  background-size: cover;
+}
+
+.ic-pin{
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  background-image: url(#{$icons-path}pin.svg);
+  background-repeat: no-repeat;
+}
+
+.ic-path{
+  width: 25px;
+  height: 9.5px;
+  object-fit: contain;
+  background-image: url(#{$icons-path}path.svg);
+  background-repeat: no-repeat;
+}
+
+.ic-calender-with-circle{
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  background-image: url(#{$icons-path}calender-with-circle.svg);
+  background-repeat: no-repeat;
+}
+
+.ic-share{
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  background-image: url(#{$icons-path}share.svg);
+  background-repeat: no-repeat;
+}
+
+.ic-comment{
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  background-image: url(#{$icons-path}comment.svg);
+  background-repeat: no-repeat;
+}
+
+.ic-i-like{
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  background-image: url(#{$icons-path}i-like.svg);
+  background-repeat: no-repeat;
+}
