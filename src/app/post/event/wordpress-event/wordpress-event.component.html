@@ -2,6 +2,7 @@
   <div class="wordpress-path-box">
     <span class="icon ic-path"></span>
     <span class="wordpress-label">TARENT BLOG</span>
+    <span class="wordpress-date">{{this.socialPost.created * 1000 | date }}</span>
   </div>
   <span *ngIf="this.socialPost !== undefined">
     <div class="caption-wordpress">{{this.socialPost.text}}</div>
