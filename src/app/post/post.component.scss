@@ -60,5 +60,21 @@
     padding-left: 45px;
     padding-right: 15px;
   }
+  &.counter{
+    position: absolute;
+    right: 0;
+    margin-right: 210px;
+  }
+  &.next{
+    position: absolute;
+    right: 0;
+    margin-right: 250px
+  }
+  &.hint{
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    font-size: 20px;
+  }
 
 }

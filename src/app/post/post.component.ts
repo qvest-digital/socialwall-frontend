@@ -2,7 +2,7 @@ import {Component, HostListener, OnInit} from '@angular/core';
 import {BackendClientService} from '../backend/backend-client.service';
 import {SocialPost} from '../interface/social-post';
 import {NgxSpinnerService} from 'ngx-spinner';
-import {interval} from 'rxjs';
+import {interval, timer} from 'rxjs';
 
 @Component({
   selector: 'app-post',
@@ -10,6 +10,9 @@ import {interval} from 'rxjs';
   styleUrls: ['./post.component.scss']
 })
 export class PostComponent implements OnInit {
+  timer = 10;
+  counter: number = this.timer;
+  pause = false;
   text: string;
   start: string;
   end: string;
@@ -28,6 +31,9 @@ export class PostComponent implements OnInit {
 
    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
      this.getAPostFromBackend();
+     this.counter = this.timer;
+   } else if ( event.key === 'ArrowUp' ) {
+     this.pause = !this.pause;
    }
   }
 
@@ -40,9 +46,16 @@ export class PostComponent implements OnInit {
   }
 
   refreshPost() {
-    interval(1000 * 10).subscribe(x => {
 
-      this.getAPostFromBackend();
+    interval(1000 * 1).subscribe(x => {
+      if (!this.pause) {
+        if ( this.counter <= 1) {
+          this.getAPostFromBackend();          
+          this.counter = this.timer;
+        } else {
+          this.counter -= 1;
+        }
+      }
     });
   }
 
