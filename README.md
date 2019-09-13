@@ -2,6 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.4.
 
+## Next Steps
+For an easier deployment process of the SocialWall we are working towards combining the frontend and backend parts into single project. Because of this, both repositories will become deprecated in the near future. 
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
